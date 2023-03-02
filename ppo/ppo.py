@@ -53,7 +53,6 @@ class PPO:
             for _ in range(self.n_updates_per_iteration):
                 V, cur_log_probs = self.evaluate(batch_obs, batch_acts)
 
-                ratios = torch.exp(cur_log_probs - batch_log_probs)
 
                 # Calculate surrogate losses
                 surr1 = ratios * A_k
