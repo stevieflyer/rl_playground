@@ -5,8 +5,6 @@ from torch.distributions import MultivariateNormal
 from torch.optim import Adam
 import numpy as np
 
-torch.autograd.set_detect_anomaly(True)
-
 from model import FeedForwardNN
 
 
